@@ -47,7 +47,7 @@ export default function Registration() {
       setErro(null);
       setSucess("Cadastro realizado. Por favor faça login.")
       setTimeout(() => {
-        window.location.href = '/'; // Limpa qualquer erro anterior
+        window.location.href = '/login'; 
       }, 2000)
     } catch (error) {
       console.error(error);

@@ -27,10 +27,10 @@ export default function Login() {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/usuarios', usuario);
+      const response = await axios.post('http://localhost:8080/login', usuario);
       console.log(response.data);
       setErro(null);
-      window.location.href = '/home'; // Redireciona para a página inicial após o login bem-sucedido
+      window.location.href = '/'; 
     } catch (error) {
       console.error(error);
       if (error.response && error.response.data && error.response.data.message) {
