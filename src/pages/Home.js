@@ -43,14 +43,14 @@ export default function Home() {
   } 
   
   return (
-    <div class='container' style={{marginTop: '100px'}}>
-      <form class="d-flex my-2 my-lg-0" onSubmit={(e) => e.preventDefault()} style={{marginTop: '20px'}}>
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="searchInput"
+    <div className='container' style={{marginTop: '100px'}}>
+      <form className="d-flex my-2 my-lg-0" onSubmit={(e) => e.preventDefault()} style={{marginTop: '20px'}}>
+            <input className="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar" id="searchInput"
             style={{width: '50%', marginRight: '10px'}}/>
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit" onClick={() => loadPesquisa(document.getElementById('searchInput').value)}>Pesquisar</button>
+            <button className="btn btn-outline-secondary my-2 my-sm-0" type="submit" onClick={() => loadPesquisa(document.getElementById('searchInput').value)}>Pesquisar</button>
       </form>
       <div className='py-4'>
-        <div class="btn-container" style={{marginBottom: '20px'}}>
+        <div className="btn-container" style={{marginBottom: '20px'}}>
           <button className="btn btn-primary mx-2" id="botao_acao" value="28" onClick={() => filtrarGenero(28)}>Ação</button>
           <button className="btn btn-outline-primary mx-2" id="botao_aventura" value="12" onClick={() => filtrarGenero(12)}>Aventura</button>
           <button className="btn btn-danger mx-2" id="botao_animacao" value="16" onClick={() => filtrarGenero(16)}>Animação</button>

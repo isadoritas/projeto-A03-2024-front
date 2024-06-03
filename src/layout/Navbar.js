@@ -1,20 +1,39 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 
+
 export default function Navbar() {
+  const auth = localStorage.getItem("user");
+  const navigate = useNavigate();
+
+  // Desconecta o usuário e retorna á pagina inicial
+  const logout = () => {
+    localStorage.clear();
+    navigate('/')
+  }
 
   return (
-    <nav class="navbar">
-      <a href="/" class="navbar-brand"><span>W</span>eb<span>D</span>ev</a>
-        {/* <a href="#" class="navbar-brand"><img src="https://www.dropbox.com/s/zzwcz0xpj95sy7p/logo%20%2810%29.png?raw=1" style="width: 50px; vertical-align: middle;"/></a>  */}
+    <nav className="navbar">
+      <a href="/" className="navbar-brand"><span>W</span>eb<span>D</span>ev</a>
       <ul>
-        <li><a href="/login">Login</a></li>
-        <li><a href="/registration">Signed Up</a></li>
-        <li><a href="#javascript">Random Movie</a></li>
+        {/* Verifica se o usuário está logado e exibe links de acordo */}
+        { auth ? (
+          <>
+            <li><Link to="#javascript">Perfil</Link></li>          
+            <li><Link to="#javascript">Random Movie</Link></li>
+            <li><Link to="/" onClick={logout}>Logout</Link></li>
+          </>
+        ) : (
+          <>
+            <li><Link to="/login">Login</Link></li>
+            <li><Link to="/registration">Signed Up</Link></li>
+          </>
+        )}
       </ul>
-      <button class="navbar-toggler">
+      <button className="navbar-toggler">
         <span></span>
       </button>
     </nav>
-  )
+  );
 }
