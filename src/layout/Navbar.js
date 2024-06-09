@@ -21,7 +21,7 @@ export default function Navbar() {
         {/* Verifica se o usuário está logado e exibe links de acordo */}
         { auth ? (
           <>
-            <li><Link to="#javascript">Perfil</Link></li>          
+            <li><Link to="/perfil">Perfil</Link></li>          
             <li><Link to="#javascript">Random Movie</Link></li>
             <li><Link to="/" onClick={logout}>Logout</Link></li>
           </>

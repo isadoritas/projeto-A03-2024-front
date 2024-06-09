@@ -87,13 +87,13 @@ export default function MoviesCard({ movie }) {
   
   
   
+  // Verifica se o filme da view foi favoritado pelo usuário e exibe ou esconde o botão dependendo da resposta
   const isFavorite = favorites.some(favorite => favorite.titulo === movie.titulo && favorite.dataDeLancamento === movie.dataDeLancamento);
   console.log(isFavorite)
   
   
   
   
-  // Verifica se o filme da view foi favoritado pelo usuário e exibe ou esconde o botão dependendo da resposta
   // Define o modelo de card dos filmes
   return (
     <div className="col-md-4 mb-4">
