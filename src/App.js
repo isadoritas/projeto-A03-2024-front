@@ -1,6 +1,7 @@
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+import RandomMovie from "./generator/RandomMovie";
 import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
 import Perfil from "./perfil/Perfil";
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/registration" element={<Registration/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/perfil" element={<Perfil/>}/>
+          <Route exact path="/generator" element={<RandomMovie/>}/>
         </Routes>
       </Router>
     </div>

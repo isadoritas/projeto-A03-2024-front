@@ -54,8 +54,8 @@ export default function Perfil() {
       <div class="d-flex justify-content-center">
         <div class="card" style={{width: '110%', height: '100px', marginBottom: '100px'}}>
           <div class="card-body">
-            <h3 class="card-title text-center fs-1">Bem Vindo</h3>
-            <h6 class="card-subtitle text-center fs-3">Esses são seus próximos filmes...</h6>
+            <h3 class="card-title text-center fs-1">Welcome</h3>
+            <h6 class="card-subtitle text-center fs-3">These are your next movies...</h6>
           </div>
         </div>
       </div>

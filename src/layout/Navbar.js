@@ -22,7 +22,7 @@ export default function Navbar() {
         { auth ? (
           <>
             <li><Link to="/perfil">Perfil</Link></li>          
-            <li><Link to="#javascript">Random Movie</Link></li>
+            <li><Link to="/generator">Random Movie</Link></li>
             <li><Link to="/" onClick={logout}>Logout</Link></li>
           </>
         ) : (
