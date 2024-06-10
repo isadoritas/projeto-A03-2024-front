@@ -16,12 +16,12 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="/" className="navbar-brand"><span>W</span>eb<span>D</span>ev</a>
+      <a href="/" className="navbar-brand"><span>N</span>ext<span>M</span>ovies</a>
       <ul>
         {/* Verifica se o usuário está logado e exibe links de acordo */}
         { auth ? (
           <>
-            <li><Link to="/perfil">Perfil</Link></li>          
+            <li><Link to="/perfil">Watch List</Link></li>          
             <li><Link to="/generator">Random Movie</Link></li>
             <li><Link to="/" onClick={logout}>Logout</Link></li>
           </>

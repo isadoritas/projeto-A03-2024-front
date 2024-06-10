@@ -1,0 +1,431 @@
+/* * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: #FFFFFF;
+} */
+
+.city {
+  max-width: 2000px;
+  max-height: 400px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* position: fixed; */
+  top: 0px;
+  left: 0px;
+  background-color: #16161D;
+  overflow: hidden;
+}
+
+.gotham {
+  width: auto;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  background-color: #16161D;
+  overflow: hidden;
+}
+
+.gotham > .darlene {
+  position: absolute;
+  left: 225px;
+  top: calc(100% - 370px);
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.42));
+  -webkit-filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 0.42));
+}
+
+.gotham > .darlene > .batman-signal {
+  width: 180px;
+  height: 180px;
+  position: relative;
+  top: -60px;
+  left: -110px;
+  z-index: 10;
+  background-color: #E6E6E6;
+  border-radius: 500px;
+  -webkit-transform: scale(0.35) rotate(-45deg);
+          transform: scale(0.35) rotate(-45deg);
+  box-shadow: inset 0px 0px 8px rgba(22, 22, 29, 1);
+  float: left;
+  -webkit-animation-name: shakeTheBumBum;
+          animation-name: shakeTheBumBum;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+@media screen and (max-width: 425px) {
+  .gotham > .darlene > .batman-signal {
+    top: -220px;
+    left: -60px;
+  }
+}
+
+.gotham > .darlene > .batman-light {
+  width: 10px;
+  height: 0px;
+  position: relative;
+  top: 20px;
+  left: 75px;
+  border-top: 160px solid #F6F6F6;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  float: left;
+  opacity: 0.4;
+}
+
+.gotham > .darlene > .batman-signal > div {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: calc((100% - 320px) / 2);
+  left: calc((100% - 320px) / 2);
+  background-color: #E6E6E6;
+  border-radius: 500px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.gotham > .darlene > .batman-signal > div > div {
+  width: 296px;
+  height: 296px;
+  position: absolute;
+  top: calc((100% - 296px) / 2);
+  left: calc((100% - 296px) / 2);
+  background-color: #16161D;
+  border-radius: 500px;
+  box-shadow: inset 0px 0px 14px rgba(21, 21, 21, 1);
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(1),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(2) {
+  width: 54px;
+  height: 54px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  margin-left: calc(-54px / 2);
+  background-color: #E6E6E6;
+  border-radius: 500px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(3),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(4) {
+  width: 78px;
+  height: 44px;
+  position: absolute;
+  bottom: -2px;
+  background-color: #E6E6E6;
+  border-radius: 500px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(1) {
+  left: 102px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(2) {
+  left: 192px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(3) {
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  left: 42px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(4) {
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  right: 42px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(5),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(6),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(7),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(8) {
+  width: 70px;
+  height: 32px;
+  position: absolute;
+  bottom: 1px;
+  background-color: #E6E6E6;
+  border-radius: 205px / 106px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(5),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(7) {
+  -webkit-transform: rotate(-112deg);
+  transform: rotate(-112deg);
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(5) {
+  right: 72px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(7) {
+  left: 93px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(8) {
+  left: 72px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(6) {
+  right: 93px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(6),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(8) {
+  -webkit-transform: rotate(-67deg);
+  transform: rotate(-67deg);
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(9) {
+  width: 110px;
+  height: 34px;
+  position: absolute;
+  top: -2px;
+  left: 92px;
+  background: #E6E6E6;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(10) {
+  width: 36px;
+  height: 56px;
+  position: absolute;
+  top: 23px;
+  left: calc((100% - 38px) / 2);
+  background-color: #16161D;
+  border-radius: 230px / 110px;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(11),
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(12) {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 2px;
+  border-bottom: 28px solid #16161D;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(11) {
+  left: 129px;
+  border-right: 14px solid transparent;
+  border-left: 1px solid transparent;
+}
+
+.gotham > .darlene > .batman-signal > div > div > div:nth-child(12) {
+  right: 131px;
+  border-left: 14px solid transparent;
+  border-right: 1px solid transparent;
+}
+
+.gotham > .building {
+  display: block;
+  float: left;
+  position: relative;
+  left: 0px;
+  z-index: 5;
+  background-color: #121212;
+  box-shadow: 0px 0px 4px rgba(21, 21, 21, 0.42);
+}
+
+.gotham > .building:nth-child(1) {
+  width: 40px;
+  height: 120px;
+  top: calc(100% - 120px);
+}
+
+.gotham > .building:nth-child(2) {
+  width: 60px;
+  height: 140px;
+  top: calc(100% - 140px);
+  margin-left: 20px;
+}
+
+.gotham > .building:nth-child(3) {
+  width: 40px;
+  height: 100px;
+  top: calc(100% - 100px);
+  margin-right: 40px;
+}
+
+.gotham > .building:nth-child(4) {
+  width: 24px;
+  height: 50px;
+  top: calc(100% - 50px);
+}
+
+.gotham > .building:nth-child(5) {
+  width: 48px;
+  height: 120px;
+  top: calc(100% - 120px);
+}
+
+.gotham > .building:nth-child(6) {
+  width: 24px;
+  height: 70px;
+  top: calc(100% - 70px);
+  margin-right: 30px;
+}
+
+.gotham > .building:nth-child(7) {
+  width: 72px;
+  height: 210px;
+  top: calc(100% - 210px);
+}
+
+.gotham > .building:nth-child(8) {
+  width: 48px;
+  height: 300px;
+  top: calc(100% - 300px);
+}
+
+.gotham > .building:nth-child(9) {
+  width: 61px;
+  height: 240px;
+  top: calc(100% - 240px);
+}
+
+.gotham > .building:nth-child(10) {
+  width: 42px;
+  height: 280px;
+  top: calc(100% - 280px);
+}
+
+.gotham > .building:nth-child(11) {
+  width: 36px;
+  height: 180px;
+  top: calc(100% - 180px);
+}
+
+.gotham > .building:nth-child(12) {
+  width: 36px;
+  height: 200px;
+  top: calc(100% - 200px);
+  margin-right: 40px;
+}
+
+.gotham > .building:nth-child(13) {
+  width: 40px;
+  height: 100px;
+  top: calc(100% - 100px);
+  margin-left: 20px;
+}
+
+.gotham > .building:nth-child(14) {
+  width: 60px;
+  height: 140px;
+  top: calc(100% - 140px);
+  margin-right: 40px;
+}
+
+.gotham > .building:nth-child(15) {
+  width: 24px;
+  height: 50px;
+  top: calc(100% - 50px);
+}
+
+.gotham > .building:nth-child(16) {
+  width: 24px;
+  height: 70px;
+  top: calc(100% - 70px);
+  margin-right: 30px;
+}
+
+.gotham > .building:nth-child(17) {
+  width: 48px;
+  height: 120px;
+  top: calc(100% - 120px);
+}
+
+.gotham > .building:nth-child(18) {
+  width: 24px;
+  height: 50px;
+  top: calc(100% - 50px);
+}
+
+@-webkit-keyframes shakeTheBumBum {
+  0% {
+    -webkit-transform: scale(0.35) rotate(-45deg);
+            transform: scale(0.35) rotate(-45deg);
+  }
+  40% {
+    -webkit-transform: scale(0.35) rotate(0deg);
+            transform: scale(0.35) rotate(0deg);
+  }
+  80% {
+    -webkit-transform: scale(0.35) rotate(-65deg);
+            transform: scale(0.35) rotate(-65deg);
+  }
+  100% {
+    -webkit-transform: scale(0.35) rotate(-45deg);
+            transform: scale(0.35) rotate(-45deg);
+  }
+}
+
+@keyframes shakeTheBumBum {
+  0% {
+    -webkit-transform: scale(0.35) rotate(-45deg);
+            transform: scale(0.35) rotate(-45deg);
+  }
+  40% {
+    -webkit-transform: scale(0.35) rotate(0deg);
+            transform: scale(0.35) rotate(0deg);
+  }
+  80% {
+    -webkit-transform: scale(0.35) rotate(-65deg);
+            transform: scale(0.35) rotate(-65deg);
+  }
+  100% {
+    -webkit-transform: scale(0.35) rotate(-45deg);
+            transform: scale(0.35) rotate(-45deg);
+  }
+}

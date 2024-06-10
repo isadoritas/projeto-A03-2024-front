@@ -102,10 +102,10 @@ export default function MoviesCard({ movie }) {
         <div className="card-body">
           <h5 className="card-title">{movie.titulo}</h5>
           <p className="card-text">{movie.sinopse}</p>
-          <p className="card-text">Avaliação: {movie.avaliacao}</p>
-          <p className="card-text">Data de Lançamento: {movie.dataDeLancamento}</p>
-          {(auth && !isFavorite) && <button className="btn btn-primary mx-2" onClick={() => handleFavorite(movie.id)}>Add Favorites</button>}
-          {(auth && isFavorite) && <button className="btn btn-danger mx-2" onClick={() => handleRemoveFavorite(movie.id)}>Remover dos Favoritos</button>}
+          <p className="card-text">Rating: {movie.avaliacao}</p>
+          <p className="card-text">Release Date: {movie.dataDeLancamento}</p>
+          {(auth && !isFavorite) && <button className="btn btn-warning mx-2" onClick={() => handleFavorite(movie.id)}>Add to list</button>}
+          {(auth && isFavorite) && <button className="btn btn-danger mx-2" onClick={() => handleRemoveFavorite(movie.id)}>Remove from list</button>}
 
         </div>
       </div>

@@ -4,6 +4,7 @@ import GenreFilter from "../filters/GenreFilter";
 import SearchBar from "../filters/SearchBar";
 import MoviesList from "../movies/MoviesList";
 import { loadMovies, loadMoviesByGenre, loadMoviesByName } from '../services/MovieService';
+import Batman from './Batman';
 import './Home.css';
 
 export default function Home() {
@@ -53,7 +54,7 @@ export default function Home() {
             setCurrentPage={setCurrentPage}
             currentPage={currentPage}
           />
-
+        <Batman/>
     </div>
     
   )
