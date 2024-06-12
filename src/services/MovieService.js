@@ -25,3 +25,15 @@ export async function loadMoviesByName(titulo) {
     console.error('Erro ao carregar filmes por nome: ', error);
   }
 }
+
+// Procura filmes alfabitcamente
+export async function loadAlphabetically() {
+  const result = await axios.get('http://localhost:8080/filmes/ordem/alfabetica');
+  return result.data;
+}
+
+// Procura filmes da maior á menor avaliação
+export async function loadByRating() {
+  const result = await axios.get('http://localhost:8080/filmes/ordenar/avaliacao');
+  return result.data;
+}

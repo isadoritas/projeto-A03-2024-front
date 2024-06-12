@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Pagination from "../components/Pagination";
+import AlphabeticOrder from '../filters/AlphabeticOrder';
 import GenreFilter from "../filters/GenreFilter";
+import RatingFilter from '../filters/RatingFilter';
 import SearchBar from "../filters/SearchBar";
 import MoviesList from "../movies/MoviesList";
-import { loadMovies, loadMoviesByGenre, loadMoviesByName } from '../services/MovieService';
+import { loadAlphabetically, loadByRating, loadMovies, loadMoviesByGenre, loadMoviesByName } from '../services/MovieService';
 import Batman from './Batman';
 import './Home.css';
 
@@ -11,7 +13,7 @@ export default function Home() {
 
   const [movies, setMovies] = useState([])
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(9);
+  const [postsPerPage, setPostsPerPage] = useState(18);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -31,6 +33,16 @@ export default function Home() {
     const moviesData = await loadMoviesByName(titulo);
     setMovies(moviesData);
   }
+
+  const ordemAlfabetica = async () => {
+    const moviesData = await loadAlphabetically();
+    setMovies(moviesData);
+  }
+
+  const ordemAvaliacao = async () => {
+    const moviesData = await loadByRating();
+    setMovies(moviesData);
+  }
   
   // Define o número de páginas e posts por página
   const lastPostIndex = currentPage * postsPerPage;
@@ -43,6 +55,10 @@ export default function Home() {
         <SearchBar loadPesquisa={loadPesquisa}/>
         <div className='py-4'>
           <GenreFilter filtrarGenero={filtrarGenero}/>
+        </div>
+        <div className='py-4'>
+          <AlphabeticOrder ordemAlfabetica={ordemAlfabetica}/>
+          <RatingFilter ordemAvaliacao={ordemAvaliacao}/>
         </div>
         
         <div className="row">
