@@ -14,6 +14,8 @@ export default function Home() {
   const [movies, setMovies] = useState([])
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(18);
+  const [error, setError] = useState(null);
+
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -31,9 +33,20 @@ export default function Home() {
 
   // Tratar erro de pesquisa caso titulo não encontrada
   const loadPesquisa = async (titulo) => {
-    const moviesData = await loadMoviesByName(titulo);
-    setMovies(moviesData);
+    try {
+      const moviesData = await loadMoviesByName(titulo);
+      if (moviesData.length === 0) {
+        setError('Filme não encontrado');
+      } else {
+        setError(null);
+      }
+      setMovies(moviesData);
+    } catch(error) {
+      console.error('Erro ao carregar filmes por nome: ', error);
+      setError('Erro ao carregar filmes por nome');
+    }
   }
+
 
   const ordemAlfabetica = async () => {
     const moviesData = await loadAlphabetically();
@@ -54,6 +67,7 @@ export default function Home() {
   return (
     <div className='container' style={{marginTop: '100px'}}>
         <SearchBar loadPesquisa={loadPesquisa}/>
+        {error && <div className="error">{error}</div>}
         <div className='py-4'>
           <GenreFilter filtrarGenero={filtrarGenero}/>
         </div>
