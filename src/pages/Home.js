@@ -29,6 +29,7 @@ export default function Home() {
     setMovies(moviesData);
   }
 
+  // Tratar erro de pesquisa caso titulo não encontrada
   const loadPesquisa = async (titulo) => {
     const moviesData = await loadMoviesByName(titulo);
     setMovies(moviesData);

@@ -31,6 +31,7 @@ export default function Navbar() {
             <li><Link to="/registration">Signed Up</Link></li>
           </>
         )}
+        <li><Link to="/sobre">About</Link></li>
       </ul>
       <button className="navbar-toggler">
         <span></span>

@@ -60,7 +60,13 @@ export default function Perfil() {
         </div>
       </div>
       <div className="row">
-        <MoviesList movies={currentPosts} />
+        {movies.length > 0 ? (
+            <MoviesList movies={currentPosts} />
+          ) : (
+            <div class="card">
+              <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
+            </div>
+        )}
       </div>
       <Pagination 
         totalPosts={movies.length} 

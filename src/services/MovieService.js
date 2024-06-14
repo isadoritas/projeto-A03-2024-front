@@ -26,7 +26,7 @@ export async function loadMoviesByName(titulo) {
   }
 }
 
-// Procura filmes alfabitcamente
+// Procura filmes alfabeticamente
 export async function loadAlphabetically() {
   const result = await axios.get('http://localhost:8080/filmes/ordem/alfabetica');
   return result.data;

@@ -1,0 +1,94 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+section {
+  height: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  section {
+    flex-wrap: nowrap;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.box:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.box {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 10px;
+  background: #CCC;
+}
+.card__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(https://alexandrebuffet.fr/codepen/parallax-cards/blur-overlay.jpg) no-repeat center center;
+  background-size: cover;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+}
+.card__image img {
+  max-width: 100%;
+  height: auto;
+  mix-blend-mode: lighten;
+}
+.card__heading {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  width: 100%;
+  color: #FFF;
+}
+.card__heading .small {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 10px;
+  transform: translateZ(15px);
+}
+.card__heading h2 {
+  margin: 0;
+  transform: translateZ(30px);
+}
+.card.rounded,
+.card.rounded .card__overlay {
+  border-radius: 8px;
+}
+.card.is-out {
+  transform: rotateX(0) rotateY(0) !important;
+  transition-duration: 1s;
+}
+
+.team-intro {
+  display: flex;
+}
+
+.text-intro {
+  margin-bottom: -100px;
+}
+
+#superman {
+  background-color: #000;
+}
+#batman {
+  background-color: #000;
+}
+#wonderwoman {
+  background-color: #000;
+}
+#aquaman {
+  background-color: #000;
+}
+
+

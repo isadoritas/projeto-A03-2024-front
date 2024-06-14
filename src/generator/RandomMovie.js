@@ -1,18 +1,51 @@
 import axios from 'axios';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import MoviesCard from '../movies/MoviesCard';
 import './RandomMovie.css';
 
 export default function RandomMovie() {
   const[movie, setMovie] = useState([]);
+  const [movies, setMovies] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
   const auth = localStorage.getItem("user");
 
+  // armazena os filmes favoritos na variável movies
+  useEffect(() => {
+    const fetchMovies = async () => {
+      if (auth) {
+        const parsedAuth = JSON.parse(auth);
+        const token = parsedAuth.tokenCodigo;
+        
+        if (!token) {
+          console.error('Token não encontrado');
+          return;
+        }
 
-  const handleClick = () => {
-    setIsClicked(!isClicked);
-  };
+        console.log('Token:', token);
 
+        axios.get('http://localhost:8080/favoritos', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+        .then(response => {
+          setMovies(response.data);
+        })
+        .catch(error => {
+          if (error.response) {
+            console.error('Resposta do servidor:', error.response);
+          } else if (error.request) {
+            console.error('Pedido feito, mas sem resposta:', error.request);
+          } else {
+            console.error('Erro ao configurar o pedido:', error.message);
+          }
+        });
+      }
+    };
+    fetchMovies();
+  }, [auth]);
+
+  // seleciona um filme específico da lista movies para ser exibido
   function pickRandomMovie() {
     if (auth) {
       const parsedAuth = JSON.parse(auth);
@@ -42,12 +75,22 @@ export default function RandomMovie() {
             <h6 class="card-subtitle text-center fs-4">Let us pick a movie based on your favorites list!</h6>
             <p class="card-text text-center fs-5">Click on the button bellow</p>
           </div>
-          <div class="d-flex justify-content-center" style={{marginTop: '20px'}}>
-            <a className="btn-generator" onClick={() => pickRandomMovie()}></a>
-          </div>
-          <div className="d-flex justify-content-center" style={{marginTop: '50px'}}>
-            {movie.length !== 0 && <MoviesCard movie={movie} />}
-          </div>
+          {movies.length !== 0 ? (
+            <div>
+              <div class="d-flex justify-content-center" style={{marginTop: '20px'}}>
+                <a className="btn-generator" style={{fontSize: '25px', border: '20px solid white'}} onClick={() => pickRandomMovie()}><b>RANDOM</b></a>
+              </div>
+              {movie.length !== 0 && (
+                <div className="d-flex justify-content-center" style={{marginTop: '50px'}}>
+                  <MoviesCard movie={movie} />
+                </div>
+              )}
+            </div>
+          ) : (
+            <div class="card">
+              <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -30,7 +30,7 @@ a {
   position: relative;
   width: 200px;
   height: 200px;
-  background: linear-gradient(to bottom, hotpink 0%, tomato 100%);
+  background: linear-gradient(to bottom, rgb(255, 245, 105) 0%, tomato 100%);
   box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
   border-radius: 50%;
   line-height: 100px;
