@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import MoviesCard from '../movies/MoviesCard';
-import './RandomMovie.css';
+import './RandomMovie.scss';
 
 export default function RandomMovie() {
   const[movie, setMovie] = useState([]);
@@ -69,28 +69,35 @@ export default function RandomMovie() {
   return (
     <div className='container' style={{ marginTop: '100px', border: '1px black' }}>
       <div class="d-flex justify-content-center">
-        <div class="card" style={{width: '110%', height: '100px', marginBottom: '100px'}}>
+      <div class="card-random" style={{width: '70%', marginBottom: '100px'}}>
           <div class="card-body">
-            <h3 class="card-title text-center fs-1">Random Movie Generator</h3>
-            <h6 class="card-subtitle text-center fs-4">Let us pick a movie based on your favorites list!</h6>
-            <p class="card-text text-center fs-5">Click on the button bellow</p>
+            <h1 style={{textAlign: "center", color: "yellow", backgroundColor: "red", fontFamily: "Bangers, cursive"}}>Random Movie Generator</h1>
+            <p style={{textAlign: "center", color: "white", backgroundColor: "#1b1fbd", fontSize: "30px", fontFamily: "Bangers, cursive"}}>Let us pick a movie based on your favorites list!</p>
+            <p style={{textAlign: "center", color: "white", backgroundColor: "#1b1fbd", fontSize: "25px", fontFamily: "Bangers, cursive"}}>Click on the button bellow</p>
           </div>
-          {movies.length !== 0 ? (
-            <div>
-              <div class="d-flex justify-content-center" style={{marginTop: '20px'}}>
-                <a className="btn-generator" style={{fontSize: '25px', border: '20px solid white'}} onClick={() => pickRandomMovie()}><b>RANDOM</b></a>
-              </div>
-              {movie.length !== 0 && (
-                <div className="d-flex justify-content-center" style={{marginTop: '50px'}}>
-                  <MoviesCard movie={movie} />
+          <div className='container-gerador'>
+            {movies.length !== 0 ? (
+              <div className='botao'>
+                {/* <div class="d-flex justify-content-center" style={{marginTop: '20px'}}>
+                  <a className="btn-generator" style={{fontSize: '25px', border: '20px solid white'}} onClick={() => pickRandomMovie()}><b>RANDOM</b></a>
+                </div> */}
+                <div class="circle" id="threed">
+                  <div class="circle button" onClick={() => pickRandomMovie()}></div>
                 </div>
-              )}
-            </div>
-          ) : (
-            <div class="card">
-              <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
-            </div>
-          )}
+                {movie.length !== 0 && (
+                  <div className="d-flex justify-content-center" id='container-random' style={{marginTop: '50px', width: '400px', backgroundColor: 'black'}}>
+                    <MoviesCard movie={movie} />
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div class="card-movie">
+                <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
+              </div>
+            )}
+            <img className='icon-space' src={process.env.PUBLIC_URL + '/comic.jpg'} alt="marvel">
+            </img>
+          </div>
         </div>
       </div>
     </div>

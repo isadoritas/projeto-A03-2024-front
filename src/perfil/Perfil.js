@@ -1,13 +1,17 @@
 import axios from 'axios';
+import { jwtDecode } from 'jwt-decode';
 import React, { useEffect, useState } from 'react';
 import Pagination from "../components/Pagination";
 import MoviesList from "../movies/MoviesList";
+
 
 export default function Perfil() {
   const [movies, setMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(9);
   const auth = localStorage.getItem("user");
+  const decodedToken = jwtDecode(auth);
+  const nome = decodedToken.Nome;
 
   // Exibe os filmes favoritados pelo usuário
   useEffect(() => {
@@ -54,7 +58,7 @@ export default function Perfil() {
       <div class="d-flex justify-content-center">
         <div class="card" style={{width: '110%', height: '100px', marginBottom: '100px'}}>
           <div class="card-body">
-            <h3 class="card-title text-center fs-1">Welcome</h3>
+            <h3 class="card-title text-center fs-1">Welcome {nome}</h3>
             <h6 class="card-subtitle text-center fs-3">These are your next movies...</h6>
           </div>
         </div>

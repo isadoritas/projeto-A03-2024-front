@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-
+import './MoviesCard.css';
 export default function MoviesCard({ movie }) {
   const[favorites, setFavorites] = useState([]);
   const auth = localStorage.getItem("user");
@@ -96,19 +96,30 @@ export default function MoviesCard({ movie }) {
   
   // Define o modelo de card dos filmes
   return (
-    <div className="col-md-4 mb-4">
-      <div className="card">
-        <img className="card-img-top" src={movie.poster} alt=""/>
-        <div className="card-body">
-          <h5 className="card-title">{movie.titulo}</h5>
-          <p className="card-text">{movie.sinopse}</p>
-          <p className="card-text">Rating: {movie.avaliacao}</p>
-          <p className="card-text">Release Date: {movie.dataDeLancamento}</p>
-          {(auth && !isFavorite) && <button className="btn btn-warning mx-2" onClick={() => handleFavorite(movie.id)}>Add to list</button>}
-          {(auth && isFavorite) && <button className="btn btn-danger mx-2" onClick={() => handleRemoveFavorite(movie.id)}>Remove from list</button>}
+    // <div className="col-md-4 mb-4">
+    //   <div className="card">
+    //     <img className="card-img-top" src={movie.poster} alt=""/>
+    //     <div className="card-body">
+    //       <h5 className="card-title">{movie.titulo}</h5>
+    //       <p className="card-text">{movie.sinopse}</p>
+    //       <p className="card-text">Rating: {movie.avaliacao}</p>
+    //       <p className="card-text">Release Date: {movie.dataDeLancamento}</p>
+    //       {(auth && !isFavorite) && <button className="btn btn-warning mx-2" onClick={() => handleFavorite(movie.id)}>Add to list</button>}
+    //       {(auth && isFavorite) && <button className="btn btn-danger mx-2" onClick={() => handleRemoveFavorite(movie.id)}>Remove from list</button>}
 
-        </div>
-      </div>
+    //     </div>
+    //   </div>
+    // </div>
+    <div class="card">
+      <a href="#">
+        <img class="img1" src={movie.poster} alt=""></img>
+        <div class="title">{movie.titulo}</div>
+        <div class="text">{movie.sinopse}</div>
+        <a href="#"><div class="catagory">{movie.avaliacao}<i class="fas fa-film"></i></div></a>
+        <a href="#"><div class="views">{movie.dataDeLancamento}<i class="far fa-eye"></i> </div></a>
+        {(auth && !isFavorite) && <button className="btn btn-outline-warning mx-2" id='movie' onClick={() => handleFavorite(movie.id)}>Add to list</button>}
+        {(auth && isFavorite) && <button className="btn btn-danger mx-2" id='movie' onClick={() => handleRemoveFavorite(movie.id)}>Remove from list</button>}
+      </a>
     </div>
   );
 }

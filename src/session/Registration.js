@@ -51,10 +51,10 @@ export default function Registration() {
         'Content-Type': 'application/json',
       }
     });
-     result = await result.json();
-     console.log(result);
-     localStorage.setItem("user", JSON.stringify(result))
-     navigate('/');
+    //  result = await result.json();
+    //  console.log(result);
+    //  localStorage.setItem("user", JSON.stringify(result))
+     navigate('/login');
   }
 
   return (

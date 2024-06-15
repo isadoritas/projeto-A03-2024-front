@@ -1,0 +1,59 @@
+$circle-diameter: 250px;
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+.botao {
+  // background-image: radial-gradient(ellipse farthest-corner, transparent 0%, transparent 35%, #fff 30%, #fff 40%, transparent 90%), radial-gradient(ellipse farthest-corner at 0px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%), radial-gradient(ellipse farthest-corner at 8px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%), radial-gradient(ellipse farthest-corner at 0px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 40%), radial-gradient(ellipse farthest-corner at 8px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%),  linear-gradient(40deg, #bd2d10 0, #f4502f 30%, #ff6e51 50%, #f4502f 70%, #bd2d10 100%);
+  // background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+  background-color: rgb(0 4 33);
+  width: 400px;
+}
+#threed {
+  background: #0f0f0f;
+  width: $circle-diameter;
+  height: $circle-diameter;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  box-shadow: 15px 15px 50px 5px #5f5f5f;
+
+  & .button {
+    background: #f00000;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 2%;
+    left: 10%;
+    box-shadow: 0 25px 0 0 #8C0606;
+    border: none;
+    transition: all .5s ease;
+
+    &:active {
+      box-shadow: 0 1px 1px 1px #8C0606;
+      top: 10%;
+    }
+  }
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+#container-random {
+  background-color: white;
+}
+
+.icon-space {
+  width: 55%;
+  object-fit: cover;
+}
+
+.container-gerador {
+  // background-image: radial-gradient(ellipse farthest-corner, transparent 0%, transparent 35%, #fff 30%, #fff 40%, transparent 90%), radial-gradient(ellipse farthest-corner at 0px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%), radial-gradient(ellipse farthest-corner at 8px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%), radial-gradient(ellipse farthest-corner at 0px 8px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 40%), radial-gradient(ellipse farthest-corner at 8px 0px, transparent 0%, transparent 20%, #fff 15%, #fff 20%, transparent 50%),  linear-gradient(40deg, #bd2d10 0, #f4502f 30%, #ff6e51 50%, #f4502f 70%, #bd2d10 100%);
+  // background-size: 8px 8px, 8px 8px, 8px 8px, 8px 8px, 8px 8px, 100% 100%;
+  // width: 900px;
+  display: flex;
+  flex-wrap: nowrap;
+  // justify-content: center;
+}
+
