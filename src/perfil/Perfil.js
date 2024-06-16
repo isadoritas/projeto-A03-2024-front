@@ -56,10 +56,11 @@ export default function Perfil() {
   return (
     <div className='container' style={{ marginTop: '100px' }}>
       <div class="d-flex justify-content-center">
-        <div class="card" style={{width: '110%', height: '100px', marginBottom: '100px'}}>
+        <div class="card" style={{width: '110%', height: '130px', marginBottom: '100px'}}>
           <div class="card-body">
-            <h3 class="card-title text-center fs-1">Welcome {nome}</h3>
-            <h6 class="card-subtitle text-center fs-3">These are your next movies...</h6>
+            <h1 class="card-title text-center fs-1" style={{textAlign: "center", color: "yellow", backgroundColor: "red", fontFamily: "Bangers, cursive"}}>Welcome {nome}</h1>
+            <p class="card-subtitle text-center fs-3" style={{textAlign: "center", color: "white", backgroundColor: "#1b1fbd", fontSize: "30px", fontFamily: "Bangers, cursive"}}>These are your next movies...</p>
+
           </div>
         </div>
       </div>
@@ -67,7 +68,7 @@ export default function Perfil() {
         {movies.length > 0 ? (
             <MoviesList movies={currentPosts} />
           ) : (
-            <div class="card">
+            <div class="card-movie">
               <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
             </div>
         )}

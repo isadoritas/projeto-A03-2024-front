@@ -4,6 +4,7 @@ import './App.css';
 import RandomMovie from "./generator/RandomMovie";
 import Navbar from "./layout/Navbar";
 import Home from "./pages/Home";
+import Landing from "./pages/Landing";
 import Sobre from "./pages/Sobre";
 import Perfil from "./perfil/Perfil";
 import Login from "./session/Login";
@@ -14,9 +15,9 @@ function App() {
     <div className="App">
       <Router>
         <Navbar/>
-        
         <Routes>
-          <Route exact path="/" element={<Home/>}/>
+          <Route exact path="/" element={<Landing/>}/>
+          <Route exact path="/home" element={<Home/>}/>
           <Route exact path="/registration" element={<Registration/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/perfil" element={<Perfil/>}/>

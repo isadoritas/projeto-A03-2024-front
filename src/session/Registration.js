@@ -12,7 +12,7 @@ const isStrongPassword = (password) => {
 }
 
 const isOnlyLetters = (str) => {
-  return /^[A-Za-z]+$/.test(str);
+  return /^[A-Za-z\s]+$/.test(str);
 }
 
 
@@ -29,7 +29,7 @@ export default function Registration() {
   useEffect(() => {
     const auth = localStorage.getItem('user');
     if (auth) {
-      navigate('/')
+      navigate('/home')
     }
   }, [])
   
@@ -75,7 +75,7 @@ export default function Registration() {
 
           <div className="mb-3">
             <label className="form-label">Senha</label>
-            <input type="senha" className={`form-control ${erro ? 'is-invalid' : ''}`} value={senha} onChange={e => setSenha(e.target.value)} required />
+            <input type="password" className={`form-control ${erro ? 'is-invalid' : ''}`} value={senha} onChange={e => setSenha(e.target.value)} required />
             {erro && (!senha || !isStrongPassword(senha)) && <div className="invalid-feedback">"A senha deve ter pelo menos 8 caracteres e conter pelo menos uma letra maiúscula, uma letra minúscula, um dígito e um caractere especial.".</div>}
           </div>
 

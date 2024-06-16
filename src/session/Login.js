@@ -30,7 +30,7 @@ export default function Login() {
     console.log(result.tokenCodigo);
     if (result.tokenCodigo) {
       localStorage.setItem('user', JSON.stringify(result));
-      navigate('/');
+      navigate('/home');
     } else {
       alert ("Please enter connect details")
     }

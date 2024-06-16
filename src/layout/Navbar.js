@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <a href="/" className="navbar-brand"><span>N</span>ext<span>M</span>ovies</a>
+      <a href="/home" className="navbar-brand"><span>N</span>ext<span>M</span>ovies</a>
       <ul>
         {/* Verifica se o usuário está logado e exibe links de acordo */}
         { auth ? (
