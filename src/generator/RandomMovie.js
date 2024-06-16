@@ -95,7 +95,7 @@ export default function RandomMovie() {
                 <h6 class="card-subtitle text-center fs-3">You haven't added any movies to your list yet</h6>
               </div>
             )}
-            <img className='icon-space' src={process.env.PUBLIC_URL + '/comic.jpg'} alt="marvel">
+            <img className='icon-space' src={process.env.PUBLIC_URL + '/gotham.jpg'} alt="marvel">
             </img>
           </div>
         </div>
