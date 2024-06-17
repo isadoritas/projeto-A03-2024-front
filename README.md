@@ -49,21 +49,22 @@ A interface do projeto foi desenvolvida em inglês com o objetivo de internacion
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Contato
-Isadora Rodrigues - [Linkedin](https://www.linkedin.com/in/isadora-rodrigues-904b36164/)
+- Isadora Rodrigues - [Linkedin](https://www.linkedin.com/in/isadora-rodrigues-904b36164/)
 
 Email - isadoradorarodrigues@gmail.com
 
-Henrique Cezar - [Linkedin]()
+Henrique Cezar - [Linkedin](http://www.linkedin.com/in/henrique-cezar)
 
-Email - 
+Email - hcgv1@hotmail.com
 
-Gabriel Felipe - [Linkedin]() 
+Gabriel Felipe - [Linkedin](https://www.linkedin.com/in/gabriel-felipe-8b3543273/) 
 
-Email -
+Email - gabrielfelipe0500@gmail.com
 
-Wesley Carvalho - [Linkedin]()
+Wesley Carvalho 
 
-Email -
+Email - Weslleyferreiracruzeiro@gmail.com
+
 Link do Projeto: https://github.com/isadoritas/projeto-A03-2024-front
 
 
