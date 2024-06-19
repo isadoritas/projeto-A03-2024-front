@@ -49,7 +49,7 @@ A interface do projeto foi desenvolvida em inglês com o objetivo de internacion
 Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
 ## Contato
-- Isadora Rodrigues - [Linkedin](https://www.linkedin.com/in/isadora-rodrigues-904b36164/)
+Isadora Rodrigues - [Linkedin](https://www.linkedin.com/in/isadora-rodrigues-904b36164/)
 
 Email - isadoradorarodrigues@gmail.com
 
