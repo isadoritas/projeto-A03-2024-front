@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# NextMovies Front-End
+![Captura de tela de 2024-06-16 16-27-07](https://github.com/isadoritas/projeto-A03-2024-front/assets/126922417/29d88b46-f514-42c7-9947-13e06aae6c6b)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Sobre o Projeto
+O NextMovies é um site intuitivo que permite aos usuários organizar e acompanhar filmes que desejam assistir. Com uma interface amigável, os usuários podem adicionar filmes à sua lista e utilizar nosso gerador para escolher o filme perfeito pra assistir hoje!
 
-## Available Scripts
 
-In the project directory, you can run:
+Atividade realizada em 2024 na grade de Estrutura de Dados e Análise de Algorítimos no curso de Ciência da Computação, ministrada na Unidade UNA Contagem por:
+- Henrique Poyatos
+- Daniel Paiva
 
-### `npm start`
+## Funcionalidades
+- **Adicionar Filmes**: Adicione novos filmes à sua lista com um clique.
+- **Organizar Filmes**: Classifique filmes por gênero, avaliação ou título.
+- **Gerador Automático**: Escolhe um filme aleatório para o usuário baseado na sua lista de favoritos.
+- **Interface Responsiva**: Acesse o site em qualquer dispositivo, com design adaptável para telas pequenas e grandes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
+- HTML5
+- CSS3 e SASS
+- JavaScript (ES6+)
+- React
+- Axios para chamadas API
+- Bootstrap
+- jwt-decode
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação e Uso
+Para rodar o projeto localmente, siga os passos abaixo:
 
-### `npm test`
+**1. Clone o repositório:** `https://github.com/isadoritas/projeto-A03-2024-front/`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**2. Navegue até a pasta do projeto e instale as dependências:** `cd projeto-A03-2024.front npm install`
+Verifique se os seguintes pacotes foram instalados:  
+- Bootstrap
+- Bootstrap Icons
+- React
+- Axios
+- SASS
+  
+**3. Vá ao repositório do Back-End, instale e rode a aplicação:** https://github.com/isadoritas/projeto-A03-2024
 
-### `npm run build`
+**4. Inicie o servidor de desenvolvimento do front:** `npm start ou npm run serve`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Idioma
+A interface do projeto foi desenvolvida em inglês com o objetivo de internacionalizar a experiência do site, assim como um exercício da linguagem para os desenvolvedores da equipe
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Licença
+Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
 
-### `npm run eject`
+## Contato
+- Isadora Rodrigues - [Linkedin](https://www.linkedin.com/in/isadora-rodrigues-904b36164/)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Email - isadoradorarodrigues@gmail.com
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Henrique Cezar - [Linkedin](http://www.linkedin.com/in/henrique-cezar)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Email - hcgv1@hotmail.com
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Gabriel Felipe - [Linkedin](https://www.linkedin.com/in/gabriel-felipe-8b3543273/) 
 
-## Learn More
+Email - gabrielfelipe0500@gmail.com
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Wesley Carvalho 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Email - Weslleyferreiracruzeiro@gmail.com
 
-### Code Splitting
+Link do Projeto: https://github.com/isadoritas/projeto-A03-2024-front
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
