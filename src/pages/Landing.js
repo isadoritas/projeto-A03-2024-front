@@ -6,7 +6,7 @@ export default function Landing() {
     <div className="intro-home">
       <header id="showcase-header" className="showcase">
         <div id="showcase-top" className="showcase-top">
-          <img style={{marginTop: '-100px'}} src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
+          <img style={{marginTop: '-100px'}}src="https://i.ibb.co/r5krrdz/logo.png" alt="" />
           <a href="#" id="sign-in-btn" className="btn btn-rounded">Sign In</a>
         </div>
         <div id="showcase-content" className="showcase-content">

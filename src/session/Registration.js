@@ -62,26 +62,26 @@ export default function Registration() {
       <div className='wrapper'>
         <form className="needs-validation">
           <div className="mb-3">
-            <label className="form-label">Nome</label>
+            <label className="form-label">Name</label>
             <input type="nome" className={`form-control ${erro ? 'is-invalid' : ''}`} value={nome} onChange={e => setNome(e.target.value)} required />
-            {erro && (!nome || !isOnlyLetters(nome)) && <div className="invalid-feedback">Por favor digite um nome válido, (apenas letras)</div>}
+            {erro && (!nome || !isOnlyLetters(nome)) && <div className="invalid-feedback">Please type a valid name (only letters)</div>}
           </div>
 
           <div className="mb-3">
             <label className="form-label">Email</label>
             <input type="email" className={`form-control ${erro ? 'is-invalid' : ''}`} value={email} onChange={e => setEmail(e.target.value)} required />
-            {erro && (!email || !isValidEmail(email)) && <div className="invalid-feedback">Por favor digite um email válido.</div>}
+            {erro && (!email || !isValidEmail(email)) && <div className="invalid-feedback">Please type a valid email</div>}
           </div>
 
           <div className="mb-3">
-            <label className="form-label">Senha</label>
+            <label className="form-label">Password</label>
             <input type="password" className={`form-control ${erro ? 'is-invalid' : ''}`} value={senha} onChange={e => setSenha(e.target.value)} required />
-            {erro && (!senha || !isStrongPassword(senha)) && <div className="invalid-feedback">"A senha deve ter pelo menos 8 caracteres e conter pelo menos uma letra maiúscula, uma letra minúscula, um dígito e um caractere especial.".</div>}
+            {erro && (!senha || !isStrongPassword(senha)) && <div className="invalid-feedback">The password must have at least 8 characters and include at least one uppercase letter, one lowercase letter, one digit, and one special character</div>}
           </div>
 
           <div className="mb-3 d-flex justify-content-between align-items-center">
-            <button type="button" className="btn btn-primary" onClick={collectData}>Registrar</button>
-            <button type="button" className="btn btn-secondary mt-3" onClick={() => window.location.href = '/'}>Voltar</button>
+            <button type="button" className="btn btn-primary" onClick={collectData}>Signed Up</button>
+            <button type="button" className="btn btn-secondary mt-3" onClick={() => window.location.href = '/'}>Back</button>
           </div>
         </form>
       </div>
